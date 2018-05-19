@@ -5,7 +5,8 @@ import uuid
 
 import brightway2 as bw
 from bw2data.backends.peewee import Exchange
-from bw2data.project import ProjectDataset, create_database
+# from bw2data.project import ProjectDataset, create_database
+import bw2data.project
 from PyQt5 import QtWidgets
 
 from .signals import signals
@@ -84,7 +85,7 @@ class Controller(object):
             bw.projects.db.close()
             bw.projects.db = create_database(
                 os.path.join(bw.projects._base_data_dir, "projects.db"),
-                [ProjectDataset]
+                [bw2data.project.ProjectDataset]
             )
             print('Loaded brightway2 data directory: {}'.format(bw.projects._base_data_dir))
 

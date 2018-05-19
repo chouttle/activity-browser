@@ -14,7 +14,8 @@ from bw2data import config
 from bw2data.backends import SQLiteBackend
 from PyQt5 import QtWidgets, QtCore
 
-from ..signals import signals
+# from ..signals import signals
+# from signals import signals
 
 
 class DatabaseImportWizard(QtWidgets.QWizard):
